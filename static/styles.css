@@ -1,0 +1,148 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117; /* Deep black background */
+  color: #d1e9ff; /* Light sky blue text */
+}
+
+/* Header */
+header {
+  background-color: #1f2937; /* Slightly lighter black for contrast */
+  color: #d1e9ff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #329eff; /* Light sky blue border */
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Main Section */
+main {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+/* Categories Section */
+#categories h2, #commands h2 {
+  color: #329eff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+#categories li {
+  background-color: #1f2937;
+  border: 1px solid #329eff;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#categories li:hover {
+  background-color: #329eff;
+  color: #0d1117;
+  transform: translateY(-3px);
+}
+
+#categories a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+/* Style for Category Buttons */
+.category-button {
+  display: block;
+  width: 100%;
+  background-color: #7db6eb; /* Light sky blue */
+  color: #0d1117; /* Deep black */
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-button:hover {
+  background-color: #1f6dc8;
+  transform: translateY(-3px);
+}
+
+/* Commands List */
+.commands-list {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937; /* Slightly lighter black */
+  border: 1px solid #329eff;
+  border-radius: 5px;
+}
+
+/* Command Card */
+.command-card {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: #1f2937;
+  border: 1px solid #329eff;
+  border-radius: 5px;
+  color: #d1e9ff;
+}
+
+
+.command-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(50, 158, 255, 0.4);
+}
+
+.command-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #329eff;
+}
+
+.command-card p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #d1e9ff;
+}
+
+/* Button */
+#load-commands {
+  display: block;
+  margin: 1rem auto;
+  background-color: #329eff;
+  color: #0d1117;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#load-commands:hover {
+  background-color: #1f6dc8;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: #d1e9ff;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-top: 2px solid #329eff;
+}

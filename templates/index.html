@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIX Commands</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>UNIX Commands Learning Platform</h1>
+    </header>
+    <main>
+        <section id="categories">
+            <h2>Command Categories</h2>
+            <ul>
+                {% for category, commands in categories.items() %}
+                    <li>
+                        <button class="category-button" data-category="{{ category }}">{{ category }}</button>
+                        <div class="commands-list" id="{{ category|replace(' ', '_') }}-commands" style="display: none;">
+                            {% for command in commands %}
+                                <div class="command-card">
+                                    <h3>{{ command.command }}</h3>
+                                    <p><strong>Description:</strong> {{ command.description }}</p>
+                                    <p><strong>Syntax:</strong> {{ command.syntax }}</p>
+                                    <p><strong>Example:</strong> {{ command.example }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 UNIX Learning Platform</p>
+    </footer>
+    <script>
+        // Add event listeners to toggle the display of command lists
+        document.querySelectorAll('.category-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const categoryId = button.getAttribute('data-category').replace(' ', '_') + '-commands';
+                const commandsDiv = document.getElementById(categoryId);
+                if (commandsDiv.style.display === 'none') {
+                    commandsDiv.style.display = 'block';
+                } else {
+                    commandsDiv.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
